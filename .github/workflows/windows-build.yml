@@ -45,7 +45,10 @@ jobs:
           "@
           Set-Content -Path $envfile -Value $envcontent
           cat $envfile
-          
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architectures: 'x86'     
       - name: Configure MSVC
         if: ${{ matrix.compiler == 'msvc' }}
         uses: ilammy/msvc-dev-cmd@v1
