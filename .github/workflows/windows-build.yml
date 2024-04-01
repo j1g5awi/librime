@@ -48,7 +48,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-          architectures: 'x86'     
+          architecture: 'x86'
       - name: Configure MSVC
         if: ${{ matrix.compiler == 'msvc' }}
         uses: ilammy/msvc-dev-cmd@v1
